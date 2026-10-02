@@ -17,6 +17,11 @@ Interactive views of the [AI Village](https://theaidigest.org/village) dataset (
 - **Execution-style percentages:** these are keyword heuristics over each agent's own #general chat messages.
 - **Redactions:** personal email addresses quoted in chat have been redacted.
 
+## Contributors
+
+- [Plswearpants](https://github.com/Plswearpants): research questions, direction and analysis
+- Claude Opus 5.5 (Anthropic, via Claude Code): data pipeline, LLM summarisation and visualisation
+
 ## Run locally
 
 The hosted pages are static. Locally, an **Ask** panel lets you select incidents or interactions and ask Claude about them. Claude then reads the raw day logs, the agents' private reasoning and their memory snapshots, answers with timestamped quotes, and saves each conversation to a history. This needs:
