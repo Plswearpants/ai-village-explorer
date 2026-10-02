@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Village Explorer</title>
+<style>
+:root { color-scheme: light; --bg: #f4f3ef; --card: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted: #8a8984; --border: #dddbd4; --accent: #4a3aa7; }
+@media (prefers-color-scheme: dark) { :root { color-scheme: dark; --bg: #121211; --card: #1a1a19; --ink: #fff; --ink2: #c3c2b7; --muted: #8c8b83; --border: #383835; --accent: #9085e9; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif; }
+main { max-width: 860px; margin: 0 auto; padding: 48px 16px 64px; }
+h1 { font-size: 28px; margin: 0 0 6px; letter-spacing: -.01em; }
+.lede { color: var(--ink2); margin: 0 0 28px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+a.card { display: block; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px; color: inherit; text-decoration: none; }
+a.card:hover { border-color: var(--accent); }
+a.card h2 { margin: 0 0 6px; font-size: 18px; color: var(--accent); }
+a.card p { margin: 0; color: var(--ink2); font-size: 14px; }
+h3 { font-size: 15px; margin: 30px 0 6px; }
+ul { padding-left: 20px; color: var(--ink2); font-size: 14px; }
+li { margin: 4px 0; }
+.cite { margin-top: 30px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--border); padding-top: 14px; }
+a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>AI Village Explorer</h1>
+  <p class="lede">Interactive views of the <a href="https://theaidigest.org/village">AI Village</a> — frontier AI agents living together in a shared chat with their own computers, pursuing goals over 18 months (Apr 2025 – Sep 2026).</p>
+  <div class="cards">
+    <a class="card" href="ai_village_timeline.html"><h2>Village timeline →</h2><p>Every agent's month-by-month story and 353 notable incidents on one timeline, with scaffolding changes marked. Click a month to zoom into weeks; hover anything for a 1–2 sentence summary.</p></a>
+    <a class="card" href="delegation.html"><h2>Who directs whom →</h2><p>Delegation in the “Each agent: Maximize your assigned goal!” period: goal attractiveness vs. actual directing, goal disclosure network, the top 7 directing pairs, and a Performance coach vs. Village Helper case study.</p></a>
+  </div>
+  <h3>Read with care</h3>
+  <ul>
+    <li>Titles, summaries, task groupings and goal ratings are LLM-generated (Claude) from the dataset — use them to navigate, then verify in the raw logs.</li>
+    <li>Delegation counts come from AI Digest's own classifier (shown on agents' public pages); their labels cover Jul 6 – Sep 7, 2026, while the goal ran to Sep 18.</li>
+    <li>Execution-style percentages are keyword heuristics over #general chat messages, not validated labels.</li>
+    <li>Personal email addresses quoted in chat have been redacted.</li>
+  </ul>
+  <p class="cite">Data: AI Digest, “AI Village dataset”, 2026 — <a href="https://theaidigest.org/village">theaidigest.org/village</a> · <a href="https://huggingface.co/datasets/aidigestorg/ai-village">huggingface.co/datasets/aidigestorg/ai-village</a>. Used under AI Digest's research terms. Analysis and visualisation: <a href="https://github.com/Plswearpants/ai-village-explorer">github.com/Plswearpants/ai-village-explorer</a>.</p>
+</main>
+</body>
+</html>
